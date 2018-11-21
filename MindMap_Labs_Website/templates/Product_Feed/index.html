@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "Product_Feed/base.html" %}
+    {% block body_block %}
+        <h1>This is the homepage of the product Product_Feed</h1>
+        <h2>All Feeds</h2>
+
+        <div class="feed-table">
+            {% if feeds %}
+                <table>
+                    <thead>
+                        <th>Website</th>
+                        <th>Platform</th>
+                        <th>Pagination</th>
+                        <th>Brand Name</th>
+                        <th>Product Condition</th>
+                        <th>Currency</th>
+                        <th>Categories</th>
+                    </thead>
+                    {% for feed in feeds %}
+                    <tr>
+                        <td>{{ feed.website }}</td>
+                        <td>{{ feed.platform }}</td>
+                        <td>{{ feed.pagination }}</td>
+                        <td>{{ feed.brand_name }}</td>
+                        <td>{{ feed.prod_condition }}</td>
+                        <td>{{ feed.currency }}</td>
+                        <td>{{ feed.categories }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>NO FEEDS FOUND</p>
+            {% endif %}
+        </div>
+    {% endblock %}
