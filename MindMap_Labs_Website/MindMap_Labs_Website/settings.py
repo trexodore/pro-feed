@@ -27,7 +27,7 @@ SECRET_KEY = 'r@69gb+!j%2q!$y7&dwd3@riwh!f!o&re5x#esk2t7m@*&!_s&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['trexodore.pythonanywhere.com']
 
 
 # Application definition
